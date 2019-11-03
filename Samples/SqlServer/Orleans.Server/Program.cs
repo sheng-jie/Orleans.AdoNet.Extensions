@@ -23,7 +23,8 @@ namespace Orleans.Server
             return Host.CreateDefaultBuilder()
                 .UseOrleans((builder) =>
                     {
-                        var connectionString =@"Data Source=Server=localhost;Database=hello_orleans;Uid=root;Pwd=passowrd";
+                        var connectionString =
+                            @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Hello.Orleans;Integrated Security=True;Pooling=False;Max Pool Size=200;MultipleActiveResultSets=True";
                         //use AdoNet for clustering 
 
                         builder.UseMySqlClustering(option =>
