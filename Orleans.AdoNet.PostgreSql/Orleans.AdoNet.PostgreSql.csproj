@@ -7,7 +7,7 @@
     <Description>Orleans extensions for configure cluster,reminder,grain persistence with Ado.NET PostgreSql provider</Description>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</PackageProjectUrl>
-    <PackageIconU>https://raw.githubusercontent.com/dotnet/orleans/gh-pages/assets/logo_128.png</PackageIconU>
+    <PackageIcon>https://raw.githubusercontent.com/dotnet/orleans/gh-pages/assets/logo_128.png</PackageIcon>
     <RepositoryUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</RepositoryUrl>
     <RepositoryType></RepositoryType>
     <PackageTags>Orleans Ado.Net PostgreSql</PackageTags>
