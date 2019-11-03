@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.AdoNet.Extensions", "Orleans.AdoNet.Extensions\Orleans.AdoNet.Extensions.csproj", "{ACFEE316-3183-4799-8993-830BE2FC6A60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.AdoNet.SqlServer", "Orleans.AdoNet.SqlServer\Orleans.AdoNet.SqlServer.csproj", "{04E816EB-46E8-427C-804C-C0164438D2DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orleans.AdoNet.SqlServer", "Orleans.AdoNet.SqlServer\Orleans.AdoNet.SqlServer.csproj", "{04E816EB-46E8-427C-804C-C0164438D2DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.AdoNet.MySql", "Orleans.AdoNet.MySql\Orleans.AdoNet.MySql.csproj", "{7437DF3A-C6FF-422D-B9F0-9B9812865134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orleans.AdoNet.MySql", "Orleans.AdoNet.MySql\Orleans.AdoNet.MySql.csproj", "{7437DF3A-C6FF-422D-B9F0-9B9812865134}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.AdoNet.Oracle", "Orleans.AdoNet.Oracle\Orleans.AdoNet.Oracle.csproj", "{B4A6E663-3A0C-4BB3-A2FE-8714CE1F5017}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orleans.AdoNet.Oracle", "Orleans.AdoNet.Oracle\Orleans.AdoNet.Oracle.csproj", "{B4A6E663-3A0C-4BB3-A2FE-8714CE1F5017}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.AdoNet.PostgreSql", "Orleans.AdoNet.PostgreSql\Orleans.AdoNet.PostgreSql.csproj", "{A66C65E2-7AE8-4353-B12A-345D9184D7AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orleans.AdoNet.PostgreSql", "Orleans.AdoNet.PostgreSql\Orleans.AdoNet.PostgreSql.csproj", "{A66C65E2-7AE8-4353-B12A-345D9184D7AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.Extensions", "Orleans.Extensions\Orleans.Extensions.csproj", "{A00F678F-1D60-4F44-BE4D-268611C3AA56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ACFEE316-3183-4799-8993-830BE2FC6A60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACFEE316-3183-4799-8993-830BE2FC6A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACFEE316-3183-4799-8993-830BE2FC6A60}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACFEE316-3183-4799-8993-830BE2FC6A60}.Release|Any CPU.Build.0 = Release|Any CPU
 		{04E816EB-46E8-427C-804C-C0164438D2DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04E816EB-46E8-427C-804C-C0164438D2DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04E816EB-46E8-427C-804C-C0164438D2DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{A66C65E2-7AE8-4353-B12A-345D9184D7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A66C65E2-7AE8-4353-B12A-345D9184D7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A66C65E2-7AE8-4353-B12A-345D9184D7AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A00F678F-1D60-4F44-BE4D-268611C3AA56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A00F678F-1D60-4F44-BE4D-268611C3AA56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A00F678F-1D60-4F44-BE4D-268611C3AA56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A00F678F-1D60-4F44-BE4D-268611C3AA56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

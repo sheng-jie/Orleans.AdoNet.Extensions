@@ -19,15 +19,17 @@
 
   <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
     <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
     </ItemGroup>
   </Target>
 
   <ItemGroup>
     <PackageReference Include="Npgsql" Version="4.1.1" />
   </ItemGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\Orleans.AdoNet.Extensions\Orleans.AdoNet.Extensions.csproj" />
+    <ProjectReference Include="..\Orleans.AdoNet.Extensions\Orleans.Extensions.csproj" />
+    <ProjectReference Include="..\Orleans.Extensions\Orleans.Extensions.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="SqlScripts\PostgreSQL-Clustering.sql">
