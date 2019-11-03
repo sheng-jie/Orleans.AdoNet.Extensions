@@ -6,7 +6,7 @@ using Orleans.Hosting;
 
 namespace Orleans.AdoNet.Persistence
 {
-    public static class AdoNetGrainStorageExtensions
+    public static class AdoNetStorageExtensions
     {
         /// <summary>
         /// Configure silo to use AdoNet grain storage as the default grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.

@@ -1,6 +1,6 @@
 ﻿using Orleans.Configuration;
 
-namespace Orleans.AdoNet.Clustering.ClientOptions
+namespace Orleans.AdoNet.MySql.Clustering
 {
     /// <summary>Options for ADO.NET MySql clustering</summary>
     public class MySqlClusteringClientOptions : AdoNetClusteringClientOptions

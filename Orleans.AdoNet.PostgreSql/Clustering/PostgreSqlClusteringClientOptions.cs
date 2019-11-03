@@ -1,6 +1,6 @@
 ﻿using Orleans.Configuration;
 
-namespace Orleans.AdoNet.Clustering.ClientOptions
+namespace Orleans.AdoNet.PostgreSql.Clustering
 {
     /// <summary>
     /// Options for ADO.NET PostgreSql clustering

@@ -1,6 +1,6 @@
 ﻿using Orleans.Configuration;
 
-namespace Orleans.AdoNet.Clustering.ClientOptions
+namespace Orleans.AdoNet.Oracle.Clustering
 {
     public class OracleClusteringClientOptions : AdoNetClusteringClientOptions
     {

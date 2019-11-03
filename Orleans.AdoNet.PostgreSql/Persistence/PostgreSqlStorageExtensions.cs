@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using Orleans.AdoNet.Persistence.GrainStorageOptions;
+using Orleans.AdoNet.Persistence;
 using Orleans.Hosting;
 
-namespace Orleans.AdoNet.Persistence
+namespace Orleans.AdoNet.PostgreSql.Persistence
 {
     public static class PostgreSqlStorageExtensions
     {

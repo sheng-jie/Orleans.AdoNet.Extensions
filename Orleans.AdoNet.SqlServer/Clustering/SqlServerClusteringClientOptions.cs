@@ -1,6 +1,6 @@
 ﻿using Orleans.Configuration;
 
-namespace Orleans.AdoNet.Clustering.ClientOptions
+namespace Orleans.AdoNet.SqlServer.Clustering
 {
     /// <summary>Options for ADO.NET Sql Server clustering</summary>
     public class SqlServerClusteringClientOptions : AdoNetClusteringClientOptions

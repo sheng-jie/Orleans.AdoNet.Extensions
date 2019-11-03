@@ -1,16 +1,16 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using Orleans.AdoNet.Reminder.ReminderTableOptions;
 using Orleans.Hosting;
+using Orleans.AdoNet.Reminder;
 
-namespace Orleans.AdoNet.Reminder
+namespace Orleans.AdoNet.MySql.Reminder
 {
     public static class MySqlReminderServiceExtensions
     {
         /// <summary>
         /// Adds reminder storage using MySql Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />
-        /// </summary>
+        /// </summary>L
         /// <param name="builder">The builder.</param>
         /// <param name="configureOptions">The configuration delegate.</param>
         /// <returns>

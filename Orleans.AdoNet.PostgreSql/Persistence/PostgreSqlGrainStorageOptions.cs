@@ -1,7 +1,6 @@
-﻿using Orleans.AdoNet.Clustering;
-using Orleans.Configuration;
+﻿using Orleans.Configuration;
 
-namespace Orleans.AdoNet.Persistence.GrainStorageOptions
+namespace Orleans.AdoNet.PostgreSql.Persistence
 {
     /// <summary>Options for ADO.NET Sql Server clustering</summary>
     public class PostgreSqlGrainStorageOptions : AdoNetGrainStorageOptions

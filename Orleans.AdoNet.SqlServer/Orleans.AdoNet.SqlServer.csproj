@@ -1,7 +1,45 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>shengjie</Authors>
+    <Company>shengjie</Company>
+    <Description>Orleans extensions for configure cluster,reminder,grain persistence with Ado.NET SqlServer provider</Description>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</PackageProjectUrl>
+    <PackageIconU>https://raw.githubusercontent.com/dotnet/orleans/gh-pages/assets/logo_128.png</PackageIconU>
+    <RepositoryUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</RepositoryUrl>
+    <RepositoryType></RepositoryType>
+    <PackageTags>Orleans Ado.Net SqlServer</PackageTags>
+    <Version>3.0.0</Version>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Orleans.AdoNet.Extensions\Orleans.AdoNet.Extensions.csproj" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="SqlScripts\SQLServer-Clustering.sql">
+      <PackagePath>lib\$(TargetFramework)\SQLServer\</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>true</Pack>
+    </None>
+    <None Update="SqlScripts\SQLServer-Main.sql">
+      <PackagePath>lib\$(TargetFramework)\SQLServer\</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>true</Pack>
+    </None>
+    <None Update="SqlScripts\SQLServer-Persistence.sql">
+      <PackagePath>lib\$(TargetFramework)\SQLServer\</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>true</Pack>
+    </None>
+    <None Update="SqlScripts\SQLServer-Reminders.sql">
+      <PackagePath>lib\$(TargetFramework)\SQLServer\</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>true</Pack>
+    </None>
+  </ItemGroup>
 
 </Project>

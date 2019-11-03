@@ -1,7 +1,6 @@
-﻿using Orleans.AdoNet.Clustering;
-using Orleans.Configuration;
+﻿using Orleans.Configuration;
 
-namespace Orleans.AdoNet.Persistence.GrainStorageOptions
+namespace Orleans.AdoNet.MySql.Persistence
 {
     public class MySqlGrainStorageOptions : AdoNetGrainStorageOptions
     {

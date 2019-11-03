@@ -4,126 +4,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Orleans.AdoNet</RootNamespace>
     <AssemblyName>Orleans.AdoNet.Extensions</AssemblyName>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>shengjie</Authors>
-    <Company>shengjie</Company>
-    <Description>Orleans extensions for configure cluster,reminder,grain persistence with Ado.NET provider</Description>
-    <PackageLicenseUrl></PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</PackageProjectUrl>
-    <PackageIconU>https://raw.githubusercontent.com/dotnet/orleans/gh-pages/assets/logo_128.png</PackageIconU>
-    <RepositoryUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</RepositoryUrl>
-    <RepositoryType></RepositoryType>
-    <PackageTags>Orleans Ado.Net</PackageTags>
-    <Version>3.0.0</Version>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
-
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.0.0" />
     <PackageReference Include="Microsoft.Orleans.Clustering.AdoNet" Version="3.0.0" />
     <PackageReference Include="Microsoft.Orleans.Reminders.AdoNet" Version="3.0.0" />
     <PackageReference Include="Microsoft.Orleans.Persistence.AdoNet" Version="3.0.0" />
-    <PackageReference Include="Microsoft.Orleans.Server" Version="3.0.0" />
-    <PackageReference Include="MySql.Data" Version="8.0.18" />
-    <PackageReference Include="Npgsql" Version="4.1.1" />
-    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.50" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <None Update="OrleansAdoNetContent\MySQL\MySQL-Clustering.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\MySQL\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\MySQL\MySQL-Main.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\MySQL\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\MySQL\MySQL-Persistence.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\MySQL\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\MySQL\MySQL-Reminders.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\MySQL\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\Oracle\Oracle-Clustering.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\Oracle\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\Oracle\Oracle-Main.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\Oracle\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\Oracle\Oracle-Persistence.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\Oracle\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\Oracle\Oracle-Reminders.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\Oracle\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\PostgreSQL\PostgreSQL-Clustering.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\PostgreSQL\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\PostgreSQL\PostgreSQL-Main.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\PostgreSQL\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\PostgreSQL\PostgreSQL-Persistence.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\PostgreSQL\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\PostgreSQL\PostgreSQL-Reminders.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\PostgreSQL\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\SQLServer\SQLServer-Clustering.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\SQLServer\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\SQLServer\SQLServer-Main.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\SQLServer\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\SQLServer\SQLServer-Persistence.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\SQLServer\</PackagePath>
-    </None>
-    <None Update="OrleansAdoNetContent\SQLServer\SQLServer-Reminders.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)\SQLServer\</PackagePath>
-    </None>
-  </ItemGroup>
-
-
-
-  <Target Name="MicrosoftOrleansClusteringAdoNetCopySqlFiles" BeforeTargets="PrepareForBuild">
-    <!-- These are the source content files needed in the project. Note that $(TargetFramework) cannot be used here since it can be netcoreapp2.0 or somesuch. -->
-    <ItemGroup>
-      <MicrosoftOrleansClusteringAdoNetItems Include="$(MSBuildThisFileDirectory)..\..\lib\netstandard2.0\**\*.sql" />
-    </ItemGroup>
-
-    <!-- The user may have modified the *.sql files fit for deployment. So they shouldn't be overwritten when Nuget restore is made. -->
-    <Copy SourceFiles="@(MicrosoftOrleansClusteringAdoNetItems)" DestinationFolder="$(MSBuildProjectDirectory)/OrleansAdoNetContent/%(RecursiveDir)" Condition="!(Exists(@(Packages->'$(TargetDir)%(Filename)%(Extension)')))" OverwriteReadOnlyFiles="false" Retries="2" RetryDelayMilliseconds="400" />
-  </Target>
 </Project>

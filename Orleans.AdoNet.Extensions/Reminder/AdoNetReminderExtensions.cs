@@ -7,7 +7,7 @@ using Orleans.Hosting;
 namespace Orleans.AdoNet.Reminder
 {
     /// <summary>Extensions for configuring ADO.NET for clustering.</summary>
-    internal static class AdoNetReminderExtensions
+    public static class AdoNetReminderExtensions
     {
         /// <summary>
         /// Adds reminder storage using ADO.NET. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />

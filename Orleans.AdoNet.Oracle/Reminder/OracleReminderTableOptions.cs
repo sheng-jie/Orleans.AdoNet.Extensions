@@ -1,7 +1,6 @@
-﻿using Orleans.AdoNet.Clustering;
-using Orleans.Configuration;
+﻿using Orleans.Configuration;
 
-namespace Orleans.AdoNet.Reminder.ReminderTableOptions
+namespace Orleans.AdoNet.Oracle.Reminder
 {
     /// <summary>Options for ADO.NET Sql Server clustering</summary>
     public class OracleReminderTableOptions : AdoNetReminderTableOptions

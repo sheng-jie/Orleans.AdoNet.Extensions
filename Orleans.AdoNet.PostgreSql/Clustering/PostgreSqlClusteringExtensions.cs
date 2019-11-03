@@ -1,15 +1,14 @@
 ﻿using System;
 using Microsoft.Extensions.Options;
-using Orleans.AdoNet.Clustering.ClientOptions;
-using Orleans.AdoNet.Clustering.SiloOptions;
+using Orleans.AdoNet.Clustering;
 using Orleans.Hosting;
 
-namespace Orleans.AdoNet.Clustering
+namespace Orleans.AdoNet.PostgreSql.Clustering
 {
-    public static class OracleHostingExtensions
+    public static class PostgreSqlClusteringExtensions
     {
         /// <summary>
-        /// Configures this silo to use Oracle for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
+        /// Configures this silo to use PostgreSql for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <param name="configureOptions">The configuration delegate.</param>
@@ -19,12 +18,12 @@ namespace Orleans.AdoNet.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloHostBuilder UseOracleClustering(this ISiloHostBuilder builder,
-            Action<OracleClusteringSiloOptions> configureOptions) =>
+        public static ISiloHostBuilder UsePostgreSqlClustering(this ISiloHostBuilder builder,
+            Action<PostgreSqlClusteringSiloOptions> configureOptions) =>
             builder.UseAdoNetClustering(configureOptions);
 
         /// <summary>
-        /// Configures this silo to use Oracle for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
+        /// Configures this silo to use PostgreSql for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <param name="configureOptions">The configuration delegate.</param>
@@ -34,12 +33,12 @@ namespace Orleans.AdoNet.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloHostBuilder UseOracleClustering(this ISiloHostBuilder builder,
-            Action<OptionsBuilder<OracleClusteringSiloOptions>> configureOptions) =>
+        public static ISiloHostBuilder UsePostgreSqlClustering(this ISiloHostBuilder builder,
+            Action<OptionsBuilder<PostgreSqlClusteringSiloOptions>> configureOptions) =>
             builder.UseAdoNetClustering(configureOptions);
 
         /// <summary>
-        /// Configures this silo to use Oracle for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
+        /// Configures this silo to use PostgreSql for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <param name="configureOptions">The configuration delegate.</param>
@@ -49,12 +48,12 @@ namespace Orleans.AdoNet.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloBuilder UseOracleClustering(this ISiloBuilder builder,
-            Action<OracleClusteringSiloOptions> configureOptions) =>
+        public static ISiloBuilder UsePostgreSqlClustering(this ISiloBuilder builder,
+            Action<PostgreSqlClusteringSiloOptions> configureOptions) =>
             builder.UseAdoNetClustering(configureOptions);
 
         /// <summary>
-        /// Configures this silo to use Oracle for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
+        /// Configures this silo to use PostgreSql for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <param name="configureOptions">The configuration delegate.</param>
@@ -64,12 +63,12 @@ namespace Orleans.AdoNet.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloBuilder UseOracleClustering(this ISiloBuilder builder,
-            Action<OptionsBuilder<OracleClusteringSiloOptions>> configureOptions) =>
+        public static ISiloBuilder UsePostgreSqlClustering(this ISiloBuilder builder,
+            Action<OptionsBuilder<PostgreSqlClusteringSiloOptions>> configureOptions) =>
             builder.UseAdoNetClustering(configureOptions);
 
         /// <summary>
-        /// Configures this silo to use Oracle for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
+        /// Configures this silo to use PostgreSql for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <param name="configureOptions">The configuration delegate.</param>
@@ -79,13 +78,13 @@ namespace Orleans.AdoNet.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static IClientBuilder UseOracleClustering(
+        public static IClientBuilder UsePostgreSqlClustering(
             this IClientBuilder builder,
-            Action<OracleClusteringClientOptions> configureOptions)
+            Action<PostgreSqlClusteringClientOptions> configureOptions)
             => builder.UseAdoNetClustering(configureOptions);
 
         /// <summary>
-        /// Configures this silo to use Oracle for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
+        /// Configures this silo to use PostgreSql for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <param name="configureOptions">The configuration delegate.</param>
@@ -95,9 +94,9 @@ namespace Orleans.AdoNet.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static IClientBuilder UseOracleClustering(
+        public static IClientBuilder UsePostgreSqlClustering(
             this IClientBuilder builder,
-            Action<OptionsBuilder<OracleClusteringClientOptions>> configureOptions)
+            Action<OptionsBuilder<PostgreSqlClusteringClientOptions>> configureOptions)
             => builder.UseAdoNetClustering(configureOptions);
     }
 }

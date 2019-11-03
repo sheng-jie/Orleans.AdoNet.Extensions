@@ -1,15 +1,15 @@
 ﻿using System;
 using Microsoft.Extensions.Options;
-using Orleans.AdoNet.Clustering.ClientOptions;
-using Orleans.AdoNet.Clustering.SiloOptions;
+using Orleans.Configuration;
 using Orleans.Hosting;
 
 namespace Orleans.AdoNet.Clustering
 {
-    public static class MySqlHostingExtensions
+    /// <summary>Extensions for configuring ADO.NET for clustering.</summary>
+    public static class AdoNetClusteringExtensions
     {
         /// <summary>
-        /// Configures this silo to use MySql for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
+        /// Configures this silo to use ADO.NET for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <param name="configureOptions">The configuration delegate.</param>
@@ -19,12 +19,13 @@ namespace Orleans.AdoNet.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloHostBuilder UseMySqlClustering(this ISiloHostBuilder builder,
-            Action<MySqlClusteringSiloOptions> configureOptions) =>
-            builder.UseAdoNetClustering(configureOptions);
+        public static ISiloHostBuilder UseAdoNetClustering<T>(
+          this ISiloHostBuilder builder,
+          Action<T> configureOptions) where T : AdoNetClusteringSiloOptions => builder.UseAdoNetClustering(configureOptions);
+
 
         /// <summary>
-        /// Configures this silo to use MySql for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
+        /// Configures this silo to use ADO.NET for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <param name="configureOptions">The configuration delegate.</param>
@@ -34,12 +35,12 @@ namespace Orleans.AdoNet.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloHostBuilder UseMySqlClustering(this ISiloHostBuilder builder,
-            Action<OptionsBuilder<MySqlClusteringSiloOptions>> configureOptions) =>
-            builder.UseAdoNetClustering(configureOptions);
+        public static ISiloHostBuilder UseAdoNetClustering<T>(
+            this ISiloHostBuilder builder,
+            Action<OptionsBuilder<T>> configureOptions)  where T : AdoNetClusteringSiloOptions => builder.UseAdoNetClustering(configureOptions);
 
         /// <summary>
-        /// Configures this silo to use MySql for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
+        /// Configures this silo to use ADO.NET for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <param name="configureOptions">The configuration delegate.</param>
@@ -49,12 +50,12 @@ namespace Orleans.AdoNet.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloBuilder UseMySqlClustering(this ISiloBuilder builder,
-            Action<MySqlClusteringSiloOptions> configureOptions) =>
-            builder.UseAdoNetClustering(configureOptions);
+        public static ISiloBuilder UseAdoNetClustering<T>(
+          this ISiloBuilder builder,
+          Action<T> configureOptions) where T : AdoNetClusteringSiloOptions => builder.UseAdoNetClustering(configureOptions);
 
         /// <summary>
-        /// Configures this silo to use MySql for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
+        /// Configures this silo to use ADO.NET for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <param name="configureOptions">The configuration delegate.</param>
@@ -64,12 +65,12 @@ namespace Orleans.AdoNet.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloBuilder UseMySqlClustering(this ISiloBuilder builder,
-            Action<OptionsBuilder<MySqlClusteringSiloOptions>> configureOptions) =>
-            builder.UseAdoNetClustering(configureOptions);
+        public static ISiloBuilder UseAdoNetClustering<T>(
+          this ISiloBuilder builder,
+          Action<OptionsBuilder<T>> configureOptions) where T : AdoNetClusteringSiloOptions => builder.UseAdoNetClustering(configureOptions);
 
         /// <summary>
-        /// Configures this silo to use MySql for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
+        /// Configures this client to use ADO.NET for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <param name="configureOptions">The configuration delegate.</param>
@@ -79,13 +80,12 @@ namespace Orleans.AdoNet.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static IClientBuilder UseMySqlClustering(
-            this IClientBuilder builder,
-            Action<MySqlClusteringClientOptions> configureOptions)
-            => builder.UseAdoNetClustering(configureOptions);
+        public static IClientBuilder UseAdoNetClustering<T>(
+          this IClientBuilder builder,
+          Action<T> configureOptions) where T : AdoNetClusteringClientOptions => builder.UseAdoNetClustering(configureOptions);
 
         /// <summary>
-        /// Configures this silo to use MySql for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
+        /// Configures this client to use ADO.NET for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <param name="configureOptions">The configuration delegate.</param>
@@ -95,9 +95,8 @@ namespace Orleans.AdoNet.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static IClientBuilder UseMySqlClustering(
-            this IClientBuilder builder,
-            Action<OptionsBuilder<MySqlClusteringClientOptions>> configureOptions)
-            => builder.UseAdoNetClustering(configureOptions);
+        public static IClientBuilder UseAdoNetClustering<T>(
+          this IClientBuilder builder,
+          Action<OptionsBuilder<T>> configureOptions) where T : AdoNetClusteringClientOptions => builder.UseAdoNetClustering(configureOptions);
     }
 }

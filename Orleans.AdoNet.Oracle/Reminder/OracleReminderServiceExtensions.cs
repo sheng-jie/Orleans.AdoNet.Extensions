@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using Orleans.AdoNet.Reminder.ReminderTableOptions;
 using Orleans.Hosting;
+using Orleans.AdoNet.Reminder;
 
-namespace Orleans.AdoNet.Reminder
+namespace Orleans.AdoNet.Oracle.Reminder
 {
     public static class OracleReminderServiceExtensions
     {
