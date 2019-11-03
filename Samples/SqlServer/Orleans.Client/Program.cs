@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
-using Orleans.AdoNet.MySql.Clustering;
+using Orleans.AdoNet.SqlServer.Clustering;
 using Orleans.Configuration;
 using Orleans.Grains;
 
@@ -17,7 +17,7 @@ namespace Orleans.Client
                     @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Hello.Orleans;Integrated Security=True;Pooling=False;Max Pool Size=200;MultipleActiveResultSets=True";
 
                 // Configure a client and connect to the service.
-                var client = new ClientBuilder().UseMySqlClustering(option =>
+                var client = new ClientBuilder().UseSqlServerClustering(option =>
                         option.ConnectionString = connectionString).Configure<ClusterOptions>(options =>
                     {
                         options.ClusterId = "Hello.Orleans";

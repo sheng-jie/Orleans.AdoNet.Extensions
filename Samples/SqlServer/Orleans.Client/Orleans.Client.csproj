@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Orleans.Client" Version="3.0.0" />
-    <PackageReference Include="Orleans.AdoNet.MySql" Version="3.0.0" />
+    <PackageReference Include="Orleans.AdoNet.SqlServer" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>
