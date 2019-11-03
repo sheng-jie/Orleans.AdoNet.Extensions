@@ -1,19 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework><GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>shengjie</Authors>
     <Company>shengjie</Company>
     <Description>Orleans extensions for configure cluster,reminder,grain persistence with Ado.NET PostgreSql provider</Description>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</PackageProjectUrl>
-    <PackageIcon>https://nuget.cdn.azure.cn/v3-flatcontainer/microsoft.orleans.orleansproviders/3.0.0/icon</PackageIcon>
+    <!--<PackageIcon>https://nuget.cdn.azure.cn/v3-flatcontainer/microsoft.orleans.orleansproviders/3.0.0/icon</PackageIcon>-->
     <RepositoryUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</RepositoryUrl>
     <RepositoryType></RepositoryType>
     <PackageTags>Orleans Ado.Net PostgreSql</PackageTags>
     <Version>3.0.0</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
+
+  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
+  </Target>
+
   <ItemGroup>
     <PackageReference Include="Npgsql" Version="4.1.1" />
   </ItemGroup>
