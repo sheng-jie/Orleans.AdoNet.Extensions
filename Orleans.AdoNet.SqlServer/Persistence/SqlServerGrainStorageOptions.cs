@@ -8,6 +8,6 @@ namespace Orleans.AdoNet.SqlServer.Persistence
         /// <summary>
         /// The invariant name of the connector for membership's database.
         /// </summary>
-        private new string Invariant  = AdoNetInvariants.InvariantNameSqlServer;
+        public new string Invariant { get; private set; }= AdoNetInvariants.InvariantNameSqlServer;
     }
 }
