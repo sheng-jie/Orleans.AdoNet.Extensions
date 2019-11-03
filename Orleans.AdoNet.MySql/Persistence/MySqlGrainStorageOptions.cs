@@ -8,6 +8,6 @@ namespace Orleans.AdoNet.MySql.Persistence
         /// <summary>
         /// The invariant name of the connector for membership's database.
         /// </summary>
-        public new string Invariant { get; private set; } = AdoNetInvariants.InvariantNameMySql;
+        private new string Invariant  = AdoNetInvariants.InvariantNameMySql;
     }
 }

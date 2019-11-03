@@ -17,11 +17,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Orleans.AdoNet.Extensions\Orleans.AdoNet.Extensions.csproj" />
+    <PackageReference Include="MySql.Data" Version="8.0.18" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="8.0.18" />
+    <ProjectReference Include="..\Orleans.AdoNet.Extensions\Orleans.AdoNet.Extensions.csproj" />
   </ItemGroup>
 
   <ItemGroup>

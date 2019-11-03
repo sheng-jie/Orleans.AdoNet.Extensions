@@ -16,8 +16,10 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Orleans.AdoNet.Extensions\Orleans.AdoNet.Extensions.csproj" />
     <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.50" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Orleans.AdoNet.Extensions\Orleans.AdoNet.Extensions.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="SqlScripts\Oracle-Clustering.sql">

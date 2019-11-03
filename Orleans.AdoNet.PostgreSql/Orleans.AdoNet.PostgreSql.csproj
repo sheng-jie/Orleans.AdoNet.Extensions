@@ -15,8 +15,10 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Orleans.AdoNet.Extensions\Orleans.AdoNet.Extensions.csproj" />
     <PackageReference Include="Npgsql" Version="4.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Orleans.AdoNet.Extensions\Orleans.AdoNet.Extensions.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="SqlScripts\PostgreSQL-Clustering.sql">

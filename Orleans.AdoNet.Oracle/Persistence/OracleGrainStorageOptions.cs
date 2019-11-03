@@ -5,6 +5,6 @@ namespace Orleans.AdoNet.Oracle.Persistence
     public class OracleGrainStorageOptions : AdoNetGrainStorageOptions
     {
 
-        public new string Invariant { get; private set; } = AdoNetInvariants.InvariantNameOracleDatabase;
+        private new string Invariant  = AdoNetInvariants.InvariantNameOracleDatabase;
     }
 }
