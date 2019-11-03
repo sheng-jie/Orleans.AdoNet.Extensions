@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Orleans.AdoNet.Extensions\Orleans.Extensions.csproj" />
+    
     <ProjectReference Include="..\Orleans.Extensions\Orleans.Extensions.csproj" />
   </ItemGroup>
   <ItemGroup>
