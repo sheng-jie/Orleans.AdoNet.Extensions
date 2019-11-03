@@ -10,6 +10,6 @@ namespace Orleans.AdoNet.SqlServer.Clustering
         /// <summary>
         /// The invariant name of the connector for membership's database.
         /// </summary>
-        public new string Invariant { get; private set; }= AdoNetInvariants.InvariantNameSqlServer;
+        public new string Invariant { get; set; }= AdoNetInvariants.InvariantNameSqlServer;
     }
 }
