@@ -21,7 +21,7 @@ namespace Orleans.AdoNet.Oracle.Reminder
         /// </remarks>
         public static ISiloHostBuilder UseOracleReminderService(
           this ISiloHostBuilder builder,
-          Action<OracleReminderTableOptions> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+          Action<OracleReminderTableOptions> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace Orleans.AdoNet.Oracle.Reminder
         /// </remarks>
         public static ISiloHostBuilder UseOracleReminderService(
             this ISiloHostBuilder builder,
-            Action<OptionsBuilder<OracleReminderTableOptions>> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+            Action<OptionsBuilder<OracleReminderTableOptions>> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
         /// <summary>
         /// Adds reminder storage using Oracle Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />
@@ -52,7 +52,7 @@ namespace Orleans.AdoNet.Oracle.Reminder
         /// </remarks>
         public static ISiloBuilder UseOracleReminderService(
           this ISiloBuilder builder,
-          Action<OracleReminderTableOptions> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+          Action<OracleReminderTableOptions> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
         /// <summary>
         /// Adds reminder storage using Oracle Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />
@@ -67,7 +67,7 @@ namespace Orleans.AdoNet.Oracle.Reminder
         /// </remarks>
         public static ISiloBuilder UseOracleReminderService(
           this ISiloBuilder builder,
-          Action<OptionsBuilder<OracleReminderTableOptions>> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+          Action<OptionsBuilder<OracleReminderTableOptions>> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
 
         /// <summary>Adds reminder storage using Oracle Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.</summary>
@@ -79,7 +79,7 @@ namespace Orleans.AdoNet.Oracle.Reminder
         /// </remarks>
         public static IServiceCollection UseOracleReminderService(
             this IServiceCollection services,
-            Action<OptionsBuilder<OracleReminderTableOptions>> configureOptions) => services.UseAdoNetReminderService(configureOptions);
+            Action<OptionsBuilder<OracleReminderTableOptions>> configureOptions) => services.UseOrleansAdoNetReminderService(configureOptions);
     
     }
 }

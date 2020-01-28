@@ -21,7 +21,7 @@ namespace Orleans.AdoNet.PostgreSql.Reminder
         /// </remarks>
         public static ISiloHostBuilder UsePostgreSqlReminderService(
           this ISiloHostBuilder builder,
-          Action<PostgreSqlReminderTableOptions> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+          Action<PostgreSqlReminderTableOptions> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace Orleans.AdoNet.PostgreSql.Reminder
         /// </remarks>
         public static ISiloHostBuilder UsePostgreSqlReminderService(
             this ISiloHostBuilder builder,
-            Action<OptionsBuilder<PostgreSqlReminderTableOptions>> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+            Action<OptionsBuilder<PostgreSqlReminderTableOptions>> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
         /// <summary>
         /// Adds reminder storage using PostgreSql Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />
@@ -52,7 +52,7 @@ namespace Orleans.AdoNet.PostgreSql.Reminder
         /// </remarks>
         public static ISiloBuilder UsePostgreSqlReminderService(
           this ISiloBuilder builder,
-          Action<PostgreSqlReminderTableOptions> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+          Action<PostgreSqlReminderTableOptions> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
         /// <summary>
         /// Adds reminder storage using PostgreSql Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />
@@ -67,7 +67,7 @@ namespace Orleans.AdoNet.PostgreSql.Reminder
         /// </remarks>
         public static ISiloBuilder UsePostgreSqlReminderService(
           this ISiloBuilder builder,
-          Action<OptionsBuilder<PostgreSqlReminderTableOptions>> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+          Action<OptionsBuilder<PostgreSqlReminderTableOptions>> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
 
         /// <summary>Adds reminder storage using PostgreSql Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.</summary>
@@ -79,7 +79,7 @@ namespace Orleans.AdoNet.PostgreSql.Reminder
         /// </remarks>
         public static IServiceCollection UsePostgreSqlReminderService(
             this IServiceCollection services,
-            Action<OptionsBuilder<PostgreSqlReminderTableOptions>> configureOptions) => services.UseAdoNetReminderService(configureOptions);
+            Action<OptionsBuilder<PostgreSqlReminderTableOptions>> configureOptions) => services.UseOrleansAdoNetReminderService(configureOptions);
     
     }
 }

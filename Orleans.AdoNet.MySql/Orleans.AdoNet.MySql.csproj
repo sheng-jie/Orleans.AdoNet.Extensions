@@ -18,14 +18,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Orleans.Extensions" Version="3.0.0" />
         <PackageReference Include="MySql.Data" Version="8.0.18" />
     </ItemGroup>
 
     <ItemGroup Label="Packaging">
         <Content Include="Orleans.AdoNet.MySql.targets" PackagePath="build\$(TargetFramework)\Orleans.AdoNet.MySql.targets" />
-
+        <!-- <Content Include="readme.txt" Pack="true" PackagePath="."/> -->
         <Content Include="SqlScripts\**\*.sql" PackagePath="content\SqlScripts" />
+        <None Include="readme.txt" pack="true" PackagePath=".">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Orleans.Extensions\Orleans.Extensions.csproj" />
     </ItemGroup>
 </Project>

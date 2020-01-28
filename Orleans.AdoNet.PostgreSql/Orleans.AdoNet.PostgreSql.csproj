@@ -17,8 +17,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Orleans.Extensions" Version="3.0.0" />
     <PackageReference Include="Npgsql" Version="4.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Orleans.Extensions\Orleans.Extensions.csproj" />
   </ItemGroup>
 
   <ItemGroup>

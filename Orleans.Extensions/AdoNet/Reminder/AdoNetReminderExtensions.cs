@@ -20,9 +20,9 @@ namespace Orleans.AdoNet.Reminder
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloHostBuilder UseAdoNetReminderService<T>(
+        public static ISiloHostBuilder UseOrleansAdoNetReminderService<T>(
           this ISiloHostBuilder builder,
-          Action<T> configureOptions) where T : AdoNetReminderTableOptions => builder.UseAdoNetReminderService(configureOptions);
+          Action<T> configureOptions) where T : AdoNetReminderTableOptions => builder.UseAdoNetReminderService(configureOptions as Action<AdoNetReminderTableOptions>);
 
 
         /// <summary>
@@ -36,9 +36,9 @@ namespace Orleans.AdoNet.Reminder
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloHostBuilder UseAdoNetReminderService<T>(
+        public static ISiloHostBuilder UseOrleansAdoNetReminderService<T>(
             this ISiloHostBuilder builder,
-            Action<OptionsBuilder<T>> configureOptions)  where T : AdoNetReminderTableOptions => builder.UseAdoNetReminderService(configureOptions);
+            Action<OptionsBuilder<T>> configureOptions) where T : AdoNetReminderTableOptions => builder.UseAdoNetReminderService(configureOptions as Action<OptionsBuilder<AdoNetReminderTableOptions>>);
 
         /// <summary>
         /// Adds reminder storage using ADO.NET. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />
@@ -51,9 +51,9 @@ namespace Orleans.AdoNet.Reminder
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloBuilder UseAdoNetReminderService<T>(
+        public static ISiloBuilder UseOrleansAdoNetReminderService<T>(
           this ISiloBuilder builder,
-          Action<T> configureOptions) where T : AdoNetReminderTableOptions => builder.UseAdoNetReminderService(configureOptions);
+          Action<T> configureOptions) where T : AdoNetReminderTableOptions => builder.UseAdoNetReminderService(configureOptions as Action<AdoNetReminderTableOptions>);
 
         /// <summary>
         /// Adds reminder storage using ADO.NET. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />
@@ -66,9 +66,9 @@ namespace Orleans.AdoNet.Reminder
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloBuilder UseAdoNetReminderService<T>(
+        public static ISiloBuilder UseOrleansAdoNetReminderService<T>(
           this ISiloBuilder builder,
-          Action<OptionsBuilder<T>> configureOptions) where T : AdoNetReminderTableOptions => builder.UseAdoNetReminderService(configureOptions);
+          Action<OptionsBuilder<T>> configureOptions) where T : AdoNetReminderTableOptions => builder.UseAdoNetReminderService(configureOptions as Action<OptionsBuilder<AdoNetReminderTableOptions>>);
 
 
         /// <summary>Adds reminder storage using ADO.NET. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.</summary>
@@ -78,8 +78,8 @@ namespace Orleans.AdoNet.Reminder
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static IServiceCollection UseAdoNetReminderService<T>(
+        public static IServiceCollection UseOrleansAdoNetReminderService<T>(
             this IServiceCollection services,
-            Action<OptionsBuilder<T>> configureOptions) where T : AdoNetReminderTableOptions => services.UseAdoNetReminderService(configureOptions);
+            Action<OptionsBuilder<T>> configureOptions) where T : AdoNetReminderTableOptions => services.UseAdoNetReminderService(configureOptions as Action<OptionsBuilder<AdoNetReminderTableOptions>>);
     }
 }

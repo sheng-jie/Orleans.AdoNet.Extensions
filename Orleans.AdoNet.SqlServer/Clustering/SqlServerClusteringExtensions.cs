@@ -20,7 +20,7 @@ namespace Orleans.AdoNet.SqlServer.Clustering
         /// </remarks>
         public static ISiloHostBuilder UseSqlServerClustering(this ISiloHostBuilder builder,
             Action<SqlServerClusteringSiloOptions> configureOptions) =>
-            builder.UseAdoNetClustering(configureOptions);
+            builder.UseOrleansAdoNetClustering(configureOptions);
 
         /// <summary>
         /// Configures this silo to use SqlServer for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -35,7 +35,7 @@ namespace Orleans.AdoNet.SqlServer.Clustering
         /// </remarks>
         public static ISiloHostBuilder UseSqlServerClustering(this ISiloHostBuilder builder,
             Action<OptionsBuilder<SqlServerClusteringSiloOptions>> configureOptions) =>
-            builder.UseAdoNetClustering(configureOptions);
+            builder.UseOrleansAdoNetClustering(configureOptions);
 
         /// <summary>
         /// Configures this silo to use SqlServer for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -48,9 +48,9 @@ namespace Orleans.AdoNet.SqlServer.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloBuilder UseSqlServerClustering(this ISiloBuilder builder,
+        public static ISiloBuilder UseOrleansSqlServerClustering(this ISiloBuilder builder,
             Action<SqlServerClusteringSiloOptions> configureOptions) =>
-            builder.UseAdoNetClustering(configureOptions);
+            builder.UseOrleansAdoNetClustering(configureOptions);
 
         /// <summary>
         /// Configures this silo to use SqlServer for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -65,7 +65,7 @@ namespace Orleans.AdoNet.SqlServer.Clustering
         /// </remarks>
         public static ISiloBuilder UseSqlServerClustering(this ISiloBuilder builder,
             Action<OptionsBuilder<SqlServerClusteringSiloOptions>> configureOptions) =>
-            builder.UseAdoNetClustering(configureOptions);
+            builder.UseOrleansAdoNetClustering(configureOptions);
 
         /// <summary>
         /// Configures this silo to use SqlServer for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -81,7 +81,7 @@ namespace Orleans.AdoNet.SqlServer.Clustering
         public static IClientBuilder UseSqlServerClustering(
             this IClientBuilder builder,
             Action<SqlServerClusteringClientOptions> configureOptions)
-            => builder.UseAdoNetClustering(configureOptions);
+            => builder.UseOrleansAdoNetClustering(configureOptions);
 
         /// <summary>
         /// Configures this silo to use SqlServer for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -97,6 +97,6 @@ namespace Orleans.AdoNet.SqlServer.Clustering
         public static IClientBuilder UseSqlServerClustering(
             this IClientBuilder builder,
             Action<OptionsBuilder<SqlServerClusteringClientOptions>> configureOptions)
-            => builder.UseAdoNetClustering(configureOptions);
+            => builder.UseOrleansAdoNetClustering(configureOptions);
     }
 }

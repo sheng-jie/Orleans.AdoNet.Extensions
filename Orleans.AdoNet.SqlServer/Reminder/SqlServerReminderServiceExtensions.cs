@@ -21,7 +21,7 @@ namespace Orleans.AdoNet.SqlServer.Reminder
         /// </remarks>
         public static ISiloHostBuilder UseSqlServerReminderService(
           this ISiloHostBuilder builder,
-          Action<SqlServerReminderTableOptions> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+          Action<SqlServerReminderTableOptions> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace Orleans.AdoNet.SqlServer.Reminder
         /// </remarks>
         public static ISiloHostBuilder UseSqlServerReminderService(
             this ISiloHostBuilder builder,
-            Action<OptionsBuilder<SqlServerReminderTableOptions>> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+            Action<OptionsBuilder<SqlServerReminderTableOptions>> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
         /// <summary>
         /// Adds reminder storage using SqlServer Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />
@@ -52,7 +52,7 @@ namespace Orleans.AdoNet.SqlServer.Reminder
         /// </remarks>
         public static ISiloBuilder UseSqlServerReminderService(
           this ISiloBuilder builder,
-          Action<SqlServerReminderTableOptions> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+          Action<SqlServerReminderTableOptions> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
         /// <summary>
         /// Adds reminder storage using SqlServer Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />
@@ -67,7 +67,7 @@ namespace Orleans.AdoNet.SqlServer.Reminder
         /// </remarks>
         public static ISiloBuilder UseSqlServerReminderService(
           this ISiloBuilder builder,
-          Action<OptionsBuilder<SqlServerReminderTableOptions>> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+          Action<OptionsBuilder<SqlServerReminderTableOptions>> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
 
         /// <summary>Adds reminder storage using SqlServer Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.</summary>
@@ -79,7 +79,7 @@ namespace Orleans.AdoNet.SqlServer.Reminder
         /// </remarks>
         public static IServiceCollection UseSqlServerReminderService(
             this IServiceCollection services,
-            Action<OptionsBuilder<SqlServerReminderTableOptions>> configureOptions) => services.UseAdoNetReminderService(configureOptions);
+            Action<OptionsBuilder<SqlServerReminderTableOptions>> configureOptions) => services.UseOrleansAdoNetReminderService(configureOptions);
 
     }
 }

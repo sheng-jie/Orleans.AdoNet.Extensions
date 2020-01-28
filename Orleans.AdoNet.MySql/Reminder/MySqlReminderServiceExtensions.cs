@@ -21,7 +21,7 @@ namespace Orleans.AdoNet.MySql.Reminder
         /// </remarks>
         public static ISiloHostBuilder UseMySqlReminderService(
           this ISiloHostBuilder builder,
-          Action<MySqlReminderTableOptions> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+          Action<MySqlReminderTableOptions> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace Orleans.AdoNet.MySql.Reminder
         /// </remarks>
         public static ISiloHostBuilder UseMySqlReminderService(
             this ISiloHostBuilder builder,
-            Action<OptionsBuilder<MySqlReminderTableOptions>> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+            Action<OptionsBuilder<MySqlReminderTableOptions>> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
         /// <summary>
         /// Adds reminder storage using MySql Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />
@@ -52,7 +52,7 @@ namespace Orleans.AdoNet.MySql.Reminder
         /// </remarks>
         public static ISiloBuilder UseMySqlReminderService(
           this ISiloBuilder builder,
-          Action<MySqlReminderTableOptions> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+          Action<MySqlReminderTableOptions> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
         /// <summary>
         /// Adds reminder storage using MySql Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />
@@ -67,7 +67,7 @@ namespace Orleans.AdoNet.MySql.Reminder
         /// </remarks>
         public static ISiloBuilder UseMySqlReminderService(
           this ISiloBuilder builder,
-          Action<OptionsBuilder<MySqlReminderTableOptions>> configureOptions) => builder.UseAdoNetReminderService(configureOptions);
+          Action<OptionsBuilder<MySqlReminderTableOptions>> configureOptions) => builder.UseOrleansAdoNetReminderService(configureOptions);
 
 
         /// <summary>Adds reminder storage using MySql Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.</summary>
@@ -79,6 +79,6 @@ namespace Orleans.AdoNet.MySql.Reminder
         /// </remarks>
         public static IServiceCollection UseMySqlReminderService(
             this IServiceCollection services,
-            Action<OptionsBuilder<MySqlReminderTableOptions>> configureOptions) => services.UseAdoNetReminderService(configureOptions);
+            Action<OptionsBuilder<MySqlReminderTableOptions>> configureOptions) => services.UseOrleansAdoNetReminderService(configureOptions);
     }
 }

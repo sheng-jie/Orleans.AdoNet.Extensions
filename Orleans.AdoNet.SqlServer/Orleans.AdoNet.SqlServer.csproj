@@ -17,12 +17,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Orleans.Extensions" Version="3.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
   </ItemGroup>
+  <ItemGroup><!--<ProjectReference Include="..\Orleans.Extensions\Orleans.Extensions.csproj" />-->
+  
+    <None Remove="Orleans.AdoNet.SqlServer.targets" />
+  </ItemGroup>
   <ItemGroup>
-    
-    <!--<ProjectReference Include="..\Orleans.Extensions\Orleans.Extensions.csproj" />-->
+    <Content Include="Orleans.AdoNet.SqlServer.targets">
+      <PackagePath>build\$(TargetFramework)\Orleans.AdoNet.MySql.targets</PackagePath>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Orleans.Extensions\Orleans.Extensions.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="SqlScripts\SQLServer-Clustering.sql">

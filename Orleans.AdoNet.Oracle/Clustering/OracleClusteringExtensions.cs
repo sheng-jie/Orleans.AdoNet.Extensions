@@ -20,7 +20,7 @@ namespace Orleans.AdoNet.Oracle.Clustering
         /// </remarks>
         public static ISiloHostBuilder UseOracleClustering(this ISiloHostBuilder builder,
             Action<OracleClusteringSiloOptions> configureOptions) =>
-            builder.UseAdoNetClustering(configureOptions);
+            builder.UseOrleansAdoNetClustering(configureOptions);
 
         /// <summary>
         /// Configures this silo to use Oracle for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -35,7 +35,7 @@ namespace Orleans.AdoNet.Oracle.Clustering
         /// </remarks>
         public static ISiloHostBuilder UseOracleClustering(this ISiloHostBuilder builder,
             Action<OptionsBuilder<OracleClusteringSiloOptions>> configureOptions) =>
-            builder.UseAdoNetClustering(configureOptions);
+            builder.UseOrleansAdoNetClustering(configureOptions);
 
         /// <summary>
         /// Configures this silo to use Oracle for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -50,7 +50,7 @@ namespace Orleans.AdoNet.Oracle.Clustering
         /// </remarks>
         public static ISiloBuilder UseOracleClustering(this ISiloBuilder builder,
             Action<OracleClusteringSiloOptions> configureOptions) =>
-            builder.UseAdoNetClustering(configureOptions);
+            builder.UseOrleansAdoNetClustering(configureOptions);
 
         /// <summary>
         /// Configures this silo to use Oracle for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -65,7 +65,7 @@ namespace Orleans.AdoNet.Oracle.Clustering
         /// </remarks>
         public static ISiloBuilder UseOracleClustering(this ISiloBuilder builder,
             Action<OptionsBuilder<OracleClusteringSiloOptions>> configureOptions) =>
-            builder.UseAdoNetClustering(configureOptions);
+            builder.UseOrleansAdoNetClustering(configureOptions);
 
         /// <summary>
         /// Configures this silo to use Oracle for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -81,7 +81,7 @@ namespace Orleans.AdoNet.Oracle.Clustering
         public static IClientBuilder UseOracleClustering(
             this IClientBuilder builder,
             Action<OracleClusteringClientOptions> configureOptions)
-            => builder.UseAdoNetClustering(configureOptions);
+            => builder.UseOrleansAdoNetClustering(configureOptions);
 
         /// <summary>
         /// Configures this silo to use Oracle for clustering. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -97,6 +97,6 @@ namespace Orleans.AdoNet.Oracle.Clustering
         public static IClientBuilder UseOracleClustering(
             this IClientBuilder builder,
             Action<OptionsBuilder<OracleClusteringClientOptions>> configureOptions)
-            => builder.UseAdoNetClustering(configureOptions);
+            => builder.UseOrleansAdoNetClustering(configureOptions);
     }
 }

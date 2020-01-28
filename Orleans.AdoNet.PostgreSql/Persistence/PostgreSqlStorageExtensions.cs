@@ -16,7 +16,7 @@ namespace Orleans.AdoNet.PostgreSql.Persistence
         /// </remarks>
         public static ISiloHostBuilder AddPostgreSqlGrainStorageAsDefault(
           this ISiloHostBuilder builder,
-          Action<PostgreSqlGrainStorageOptions> configureOptions) => builder.AddAdoNetGrainStorageAsDefault(configureOptions);
+          Action<PostgreSqlGrainStorageOptions> configureOptions) => builder.AddOrleansAdoNetGrainStorageAsDefault(configureOptions);
 
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace Orleans.AdoNet.PostgreSql.Persistence
             this ISiloHostBuilder builder,
             string name,
             Action<PostgreSqlGrainStorageOptions> configureOptions)
-            => builder.AddAdoNetGrainStorage(name, configureOptions);
+            => builder.AddOrleansAdoNetGrainStorage(name, configureOptions);
 
         /// <summary>
         /// Configure silo to use  PostgreSql grain storage as the default grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -40,7 +40,7 @@ namespace Orleans.AdoNet.PostgreSql.Persistence
         public static ISiloHostBuilder AddPostgreSqlGrainStorageAsDefault(
           this ISiloHostBuilder builder,
           Action<OptionsBuilder<PostgreSqlGrainStorageOptions>> configureOptions)
-            => builder.AddAdoNetGrainStorageAsDefault(configureOptions);
+            => builder.AddOrleansAdoNetGrainStorageAsDefault(configureOptions);
 
         /// <summary>
         /// Configure silo to use PostgreSql grain storage for grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -52,7 +52,7 @@ namespace Orleans.AdoNet.PostgreSql.Persistence
             this ISiloHostBuilder builder,
             string name,
             Action<OptionsBuilder<PostgreSqlGrainStorageOptions>> configureOptions = null)
-             => builder.AddAdoNetGrainStorage(name, configureOptions);
+             => builder.AddOrleansAdoNetGrainStorage(name, configureOptions);
 
         /// <summary>
         /// Configure silo to use PostgreSql grain storage as the default grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -63,7 +63,7 @@ namespace Orleans.AdoNet.PostgreSql.Persistence
         public static ISiloBuilder AddPostgreSqlGrainStorageAsDefault(
             this ISiloBuilder builder,
             Action<PostgreSqlGrainStorageOptions> configureOptions)
-             => builder.AddAdoNetGrainStorageAsDefault(configureOptions);
+             => builder.AddOrleansAdoNetGrainStorageAsDefault(configureOptions);
 
         /// <summary>
         /// Configure silo to use  PostgreSql grain storage for grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -75,7 +75,7 @@ namespace Orleans.AdoNet.PostgreSql.Persistence
             this ISiloBuilder builder,
             string name,
             Action<PostgreSqlGrainStorageOptions> configureOptions)
-             => builder.AddAdoNetGrainStorage(name, configureOptions);
+             => builder.AddOrleansAdoNetGrainStorage(name, configureOptions);
 
         /// <summary>
         /// Configure silo to use  PostgreSql grain storage as the default grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -86,7 +86,7 @@ namespace Orleans.AdoNet.PostgreSql.Persistence
         public static ISiloBuilder AddPostgreSqlGrainStorageAsDefault(
             this ISiloBuilder builder,
             Action<OptionsBuilder<PostgreSqlGrainStorageOptions>> configureOptions = null)
-             => builder.AddAdoNetGrainStorageAsDefault(configureOptions);
+             => builder.AddOrleansAdoNetGrainStorageAsDefault(configureOptions);
 
         /// <summary>
         /// Configure silo to use PostgreSql grain storage for grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -98,7 +98,7 @@ namespace Orleans.AdoNet.PostgreSql.Persistence
             this ISiloBuilder builder,
             string name,
             Action<OptionsBuilder<PostgreSqlGrainStorageOptions>> configureOptions = null)
-             => builder.AddAdoNetGrainStorage(name, configureOptions);
+             => builder.AddOrleansAdoNetGrainStorage(name, configureOptions);
 
         /// <summary>
         /// Configure silo to use  PostgreSql grain storage as the default grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -109,7 +109,7 @@ namespace Orleans.AdoNet.PostgreSql.Persistence
         public static IServiceCollection AddPostgreSqlGrainStorage(
             this IServiceCollection services,
             Action<PostgreSqlGrainStorageOptions> configureOptions)
-             => services.AddAdoNetGrainStorage(configureOptions);
+             => services.AddOrleansAdoNetGrainStorage(configureOptions);
 
         /// <summary>
         /// Configure silo to use PostgreSql grain storage for grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -121,7 +121,7 @@ namespace Orleans.AdoNet.PostgreSql.Persistence
           this IServiceCollection services,
           string name,
           Action<PostgreSqlGrainStorageOptions> configureOptions)
-         => services.AddAdoNetGrainStorage(name, configureOptions);
+         => services.AddOrleansAdoNetGrainStorage(name, configureOptions);
 
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace Orleans.AdoNet.PostgreSql.Persistence
         public static IServiceCollection AddPostgreSqlGrainStorageAsDefault(
             this IServiceCollection services,
             Action<OptionsBuilder<PostgreSqlGrainStorageOptions>> configureOptions = null)
-             => services.AddAdoNetGrainStorageAsDefault(configureOptions);
+             => services.AddOrleansAdoNetGrainStorageAsDefault(configureOptions);
 
         /// <summary>
         /// Configure silo to use PostgreSql grain storage for grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -145,6 +145,6 @@ namespace Orleans.AdoNet.PostgreSql.Persistence
             this IServiceCollection services,
             string name,
             Action<OptionsBuilder<PostgreSqlGrainStorageOptions>> configureOptions = null)
-             => services.AddAdoNetGrainStorage(name, configureOptions);
+             => services.AddOrleansAdoNetGrainStorage(name, configureOptions);
     }
 }
