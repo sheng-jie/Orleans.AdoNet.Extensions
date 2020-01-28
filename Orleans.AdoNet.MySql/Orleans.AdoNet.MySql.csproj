@@ -1,48 +1,31 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>shengjie</Authors>
+        <Company>shengjie</Company>
+        <Description>Orleans extensions for configure cluster,reminder,grain persistence with Ado.NET MySql provider</Description>
+        <PackageLicenseUrl></PackageLicenseUrl>
+        <PackageProjectUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</PackageProjectUrl>
+        <!--<PackageIcon>https://nuget.cdn.azure.cn/v3-flatcontainer/microsoft.orleans.orleansproviders/3.0.0/icon</PackageIcon>-->
+        <RepositoryUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</RepositoryUrl>
+        <RepositoryType></RepositoryType>
+        <PackageTags>Orleans Ado.Net MySql</PackageTags>
+        <PackageId>Orleans.AdoNet.MySql</PackageId>
+        <Version>3.1.0</Version>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    </PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>shengjie</Authors>
-    <Company>shengjie</Company>
-    <Description>Orleans extensions for configure cluster,reminder,grain persistence with Ado.NET MySql provider</Description>
-    <PackageLicenseUrl></PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</PackageProjectUrl>
-    <!--<PackageIcon>https://nuget.cdn.azure.cn/v3-flatcontainer/microsoft.orleans.orleansproviders/3.0.0/icon</PackageIcon>-->
-    <RepositoryUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</RepositoryUrl>
-    <RepositoryType></RepositoryType>
-    <PackageTags>Orleans Ado.Net MySql</PackageTags>
-    <Version>3.0.0</Version>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-  </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Orleans.Extensions" Version="3.0.0" />
+        <PackageReference Include="MySql.Data" Version="8.0.18" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Orleans.Extensions" Version="3.0.0" />
-    <PackageReference Include="MySql.Data" Version="8.0.18" />
-  </ItemGroup>
+    <ItemGroup Label="Packaging">
+        <Content Include="Orleans.AdoNet.MySql.targets" PackagePath="build\$(TargetFramework)\Orleans.AdoNet.MySql.targets" />
 
-  <ItemGroup>
-    <None Update="SqlScripts\MySQL-Clustering.sql">
-      <PackagePath>lib\$(TargetFramework)\MySQL\</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-    </None>
-    <None Update="SqlScripts\MySQL-Main.sql">
-      <PackagePath>lib\$(TargetFramework)\MySQL\</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-    </None>
-    <None Update="SqlScripts\MySQL-Persistence.sql">
-      <PackagePath>lib\$(TargetFramework)\MySQL\</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-    </None>
-    <None Update="SqlScripts\MySQL-Reminders.sql">
-      <PackagePath>lib\$(TargetFramework)\MySQL\</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-    </None>
-  </ItemGroup>
+        <Content Include="SqlScripts\**\*.sql" PackagePath="content\SqlScripts" />
 
-
+    </ItemGroup>
 </Project>
