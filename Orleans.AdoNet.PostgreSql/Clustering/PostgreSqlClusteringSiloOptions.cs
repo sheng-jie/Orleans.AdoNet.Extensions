@@ -6,9 +6,9 @@ namespace Orleans.AdoNet.PostgreSql.Clustering
     public class PostgreSqlClusteringSiloOptions : AdoNetClusteringSiloOptions
     {
 
-        /// <summary>
-        /// The invariant name of the connector for membership's database.
-        /// </summary>
-        private new string Invariant  = AdoNetInvariants.InvariantNamePostgreSql;
+        public PostgreSqlClusteringSiloOptions()
+        {
+            base.Invariant = AdoNetInvariants.InvariantNamePostgreSql;
+        }
     }
 }

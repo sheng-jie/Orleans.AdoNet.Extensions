@@ -7,10 +7,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Orleans.Server" Version="3.0.0" />
-    <PackageReference Include="Orleans.AdoNet.SqlServer" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Orleans.AdoNet.SqlServer\Orleans.AdoNet.SqlServer.csproj" />
     <ProjectReference Include="..\Orleans.Grains\Orleans.Grains.csproj" />
   </ItemGroup>
 

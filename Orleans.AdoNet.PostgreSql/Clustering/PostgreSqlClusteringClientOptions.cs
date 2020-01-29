@@ -7,10 +7,9 @@ namespace Orleans.AdoNet.PostgreSql.Clustering
     /// </summary>
     public class PostgreSqlClusteringClientOptions : AdoNetClusteringClientOptions
     {
-
-        /// <summary>
-        /// The invariant name of the connector for membership's database.
-        /// </summary>
-        private new string Invariant  = AdoNetInvariants.InvariantNamePostgreSql;
+        public PostgreSqlClusteringClientOptions()
+        {
+            base.Invariant = AdoNetInvariants.InvariantNamePostgreSql;
+        }
     }
 }
