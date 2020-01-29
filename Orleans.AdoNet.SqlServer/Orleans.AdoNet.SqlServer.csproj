@@ -29,7 +29,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Orleans.Extensions\Orleans.Extensions.csproj" />
+      <ProjectReference Include="..\Orleans.AdoNet.Extensions\Orleans.AdoNet.Extensions.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="SqlScripts\SQLServer-Clustering.sql">
