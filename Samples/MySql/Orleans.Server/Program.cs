@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Orleans.Configuration;
 using Orleans.Hosting;
 using Orleans.AdoNet.Clustering;
@@ -23,29 +24,28 @@ namespace Orleans.Server
             return Host.CreateDefaultBuilder()
                 .UseOrleans((builder) =>
                     {
-                        var connectionString =@"Data Source=Server=localhost;Database=hello_orleans;Uid=root;Pwd=passowrd";
+                        var connectionString =@"Data Source=Server=localhost;Database=hello_orleans;Uid=root;Pwd=";
                         //use AdoNet for clustering 
-
-                        builder.UseMySqlClustering(option =>
-                            option.ConnectionString = connectionString).Configure<ClusterOptions>(options =>
+                        
+                        builder.UseMySqlClustering(option => { option.ConnectionString = connectionString; }).Configure<ClusterOptions>(options =>
                         {
                             options.ClusterId = "Hello.Orleans";
                             options.ServiceId = "Hello.Orleans";
                         }).ConfigureEndpoints(new Random().Next(10001, 20000), new Random().Next(20001, 30000));
 
                         //use AdoNet for reminder service
-                        builder.UseMySqlReminderService(options =>
-                            options.ConnectionString = connectionString
-                        );
-
-                        //use AdoNet for Persistence
-                        builder.AddMySqlGrainStorageAsDefault(options =>
-                       {
-                           options.ConnectionString = connectionString;
-                           options.UseJsonFormat = true;
-                       });
-
-                        builder.ConfigureApplicationParts(parts => parts.AddApplicationPart(typeof(IHelloGrain).Assembly).WithReferences());
+                       //  builder.UseMySqlReminderService(options =>
+                       //      options.ConnectionString = connectionString
+                       //  );
+                       //
+                       //  //use AdoNet for Persistence
+                       //  builder.AddMySqlGrainStorageAsDefault(options =>
+                       // {
+                       //     options.ConnectionString = connectionString;
+                       //     options.UseJsonFormat = true;
+                       // });
+                       //
+                       //  builder.ConfigureApplicationParts(parts => parts.AddApplicationPart(typeof(IHelloGrain).Assembly).WithReferences());
                     }
                 )
                 .ConfigureServices(services =>

@@ -31,28 +31,6 @@ namespace Orleans.AdoNet.SqlServer.Persistence
             Action<SqlServerGrainStorageOptions> configureOptions)
             => builder.AddOrleansAdoNetGrainStorage(name, configureOptions);
 
-        /// <summary>
-        /// Configure silo to use  SqlServer grain storage as the default grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
-        /// </summary>
-        /// <remarks>
-        /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
-        /// </remarks>
-        public static ISiloHostBuilder AddSqlServerGrainStorageAsDefault(
-          this ISiloHostBuilder builder,
-          Action<OptionsBuilder<SqlServerGrainStorageOptions>> configureOptions)
-            => builder.AddOrleansAdoNetGrainStorageAsDefault(configureOptions);
-
-        /// <summary>
-        /// Configure silo to use SqlServer grain storage for grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
-        /// </summary>
-        /// <remarks>
-        /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
-        /// </remarks>
-        public static ISiloHostBuilder AddSqlServerGrainStorage(
-            this ISiloHostBuilder builder,
-            string name,
-            Action<OptionsBuilder<SqlServerGrainStorageOptions>> configureOptions = null)
-             => builder.AddOrleansAdoNetGrainStorage(name, configureOptions);
 
         /// <summary>
         /// Configure silo to use SqlServer grain storage as the default grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -77,28 +55,6 @@ namespace Orleans.AdoNet.SqlServer.Persistence
             Action<SqlServerGrainStorageOptions> configureOptions)
              => builder.AddOrleansAdoNetGrainStorage(name, configureOptions);
 
-        /// <summary>
-        /// Configure silo to use  SqlServer grain storage as the default grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
-        /// </summary>
-        /// <remarks>
-        /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
-        /// </remarks>
-        public static ISiloBuilder AddSqlServerGrainStorageAsDefault(
-            this ISiloBuilder builder,
-            Action<OptionsBuilder<SqlServerGrainStorageOptions>> configureOptions = null)
-             => builder.AddOrleansAdoNetGrainStorageAsDefault(configureOptions);
-
-        /// <summary>
-        /// Configure silo to use SqlServer grain storage for grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
-        /// </summary>
-        /// <remarks>
-        /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
-        /// </remarks>
-        public static ISiloBuilder AddSqlServerGrainStorage(
-            this ISiloBuilder builder,
-            string name,
-            Action<OptionsBuilder<SqlServerGrainStorageOptions>> configureOptions = null)
-             => builder.AddOrleansAdoNetGrainStorage(name, configureOptions);
 
         /// <summary>
         /// Configure silo to use  SqlServer grain storage as the default grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
@@ -122,29 +78,5 @@ namespace Orleans.AdoNet.SqlServer.Persistence
           string name,
           Action<SqlServerGrainStorageOptions> configureOptions)
          => services.AddOrleansAdoNetGrainStorage(name, configureOptions);
-
-
-        /// <summary>
-        /// Configure silo to use SqlServer grain storage as the default grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
-        /// </summary>
-        /// <remarks>
-        /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
-        /// </remarks>
-        public static IServiceCollection AddSqlServerGrainStorageAsDefault(
-            this IServiceCollection services,
-            Action<OptionsBuilder<SqlServerGrainStorageOptions>> configureOptions = null)
-             => services.AddOrleansAdoNetGrainStorageAsDefault(configureOptions);
-
-        /// <summary>
-        /// Configure silo to use SqlServer grain storage for grain storage. Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
-        /// </summary>
-        /// <remarks>
-        /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
-        /// </remarks>
-        public static IServiceCollection AddSqlServerGrainStorage(
-            this IServiceCollection services,
-            string name,
-            Action<OptionsBuilder<SqlServerGrainStorageOptions>> configureOptions = null)
-             => services.AddOrleansAdoNetGrainStorage(name, configureOptions);
     }
 }
