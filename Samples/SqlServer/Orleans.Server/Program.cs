@@ -29,7 +29,7 @@ namespace Orleans.Server
                             @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Hello.Orleans;Integrated Security=True;Pooling=False;Max Pool Size=200;MultipleActiveResultSets=True";
                         //use AdoNet for clustering 
 
-                        builder.UseOrleansSqlServerClustering(option =>
+                        builder.UseSqlServerClustering(option =>
                         {
                             option.ConnectionString = connectionString;
                         }).Configure<ClusterOptions>(options =>

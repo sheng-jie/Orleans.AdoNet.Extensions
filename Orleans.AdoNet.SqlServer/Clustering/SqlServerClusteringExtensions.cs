@@ -34,7 +34,7 @@ namespace Orleans.AdoNet.SqlServer.Clustering
         /// <remarks>
         /// Instructions on configuring your database are available at <see href="http://aka.ms/orleans-sql-scripts" />.
         /// </remarks>
-        public static ISiloBuilder UseOrleansSqlServerClustering(this ISiloBuilder builder,
+        public static ISiloBuilder UseSqlServerClustering(this ISiloBuilder builder,
             Action<SqlServerClusteringSiloOptions> configureOptions) =>
             builder.UseOrleansAdoNetClustering(configureOptions);
 
