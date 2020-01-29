@@ -30,8 +30,8 @@ namespace Orleans.Client
                 Console.WriteLine("Client successfully connect to silo host");
 
                 // Use the connected client to call a grain, writing the result to the terminal.
-                var friend = client.GetGrain<IHelloGrain>(string.Empty);
-                var response = await friend.SayHi("Shengjie");
+                var friend = client.GetGrain<IHelloGrain>(" ");
+                var response = await friend.SayHi("hello orleans");
                 Console.WriteLine(response);
 
                 Console.ReadKey();

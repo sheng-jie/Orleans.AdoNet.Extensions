@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Orleans.AdoNet.SqlServer\Orleans.AdoNet.SqlServer.csproj" />
     <ProjectReference Include="..\Orleans.Grains\Orleans.Grains.csproj" />
   </ItemGroup>
 
