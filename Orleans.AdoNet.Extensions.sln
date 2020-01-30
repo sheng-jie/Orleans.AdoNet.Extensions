@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.AdoNet.SqlServer", "src\Orleans.AdoNet.SqlServer\Orleans.AdoNet.SqlServer.csproj", "{04E816EB-46E8-427C-804C-C0164438D2DA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.AdoNet.MySql", "src\Orleans.AdoNet.MySql\Orleans.AdoNet.MySql.csproj", "{7437DF3A-C6FF-422D-B9F0-9B9812865134}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.AdoNet.Oracle", "src\Orleans.AdoNet.Oracle\Orleans.AdoNet.Oracle.csproj", "{B4A6E663-3A0C-4BB3-A2FE-8714CE1F5017}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.AdoNet.PostgreSql", "src\Orleans.AdoNet.PostgreSql\Orleans.AdoNet.PostgreSql.csproj", "{A66C65E2-7AE8-4353-B12A-345D9184D7AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.AdoNet.Extensions", "src\Orleans.AdoNet.Extensions\Orleans.AdoNet.Extensions.csproj", "{5DC73E54-9420-466F-83D4-CEE1123C6C76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FDE124B5-386D-4D2E-88F7-60233A14B29D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{7C154AEA-8153-4608-9107-C1DEB399DA8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8FABEB5B-7C4C-4ABA-AF5B-8141B59515BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.SqlServer.Silo", "samples\Orleans.SqlServer.Silo\Orleans.SqlServer.Silo.csproj", "{6279C8E6-B228-4A87-9DC6-D3916A126703}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.SqlServer.Grains", "samples\Orleans.SqlServer.Grains\Orleans.SqlServer.Grains.csproj", "{4851B3DF-3B17-4109-87CE-8F11491AADE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.SqlServer.Client", "samples\Orleans.SqlServer.Client\Orleans.SqlServer.Client.csproj", "{0C9EB3D7-0848-4CCC-A095-E483655A7A75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04E816EB-46E8-427C-804C-C0164438D2DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E816EB-46E8-427C-804C-C0164438D2DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04E816EB-46E8-427C-804C-C0164438D2DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04E816EB-46E8-427C-804C-C0164438D2DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7437DF3A-C6FF-422D-B9F0-9B9812865134}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7437DF3A-C6FF-422D-B9F0-9B9812865134}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7437DF3A-C6FF-422D-B9F0-9B9812865134}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7437DF3A-C6FF-422D-B9F0-9B9812865134}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4A6E663-3A0C-4BB3-A2FE-8714CE1F5017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A6E663-3A0C-4BB3-A2FE-8714CE1F5017}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A6E663-3A0C-4BB3-A2FE-8714CE1F5017}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A6E663-3A0C-4BB3-A2FE-8714CE1F5017}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A66C65E2-7AE8-4353-B12A-345D9184D7AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66C65E2-7AE8-4353-B12A-345D9184D7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66C65E2-7AE8-4353-B12A-345D9184D7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66C65E2-7AE8-4353-B12A-345D9184D7AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DC73E54-9420-466F-83D4-CEE1123C6C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DC73E54-9420-466F-83D4-CEE1123C6C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DC73E54-9420-466F-83D4-CEE1123C6C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DC73E54-9420-466F-83D4-CEE1123C6C76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6279C8E6-B228-4A87-9DC6-D3916A126703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6279C8E6-B228-4A87-9DC6-D3916A126703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6279C8E6-B228-4A87-9DC6-D3916A126703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6279C8E6-B228-4A87-9DC6-D3916A126703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4851B3DF-3B17-4109-87CE-8F11491AADE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4851B3DF-3B17-4109-87CE-8F11491AADE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4851B3DF-3B17-4109-87CE-8F11491AADE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4851B3DF-3B17-4109-87CE-8F11491AADE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C9EB3D7-0848-4CCC-A095-E483655A7A75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C9EB3D7-0848-4CCC-A095-E483655A7A75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C9EB3D7-0848-4CCC-A095-E483655A7A75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C9EB3D7-0848-4CCC-A095-E483655A7A75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04E816EB-46E8-427C-804C-C0164438D2DA} = {FDE124B5-386D-4D2E-88F7-60233A14B29D}
+		{7437DF3A-C6FF-422D-B9F0-9B9812865134} = {FDE124B5-386D-4D2E-88F7-60233A14B29D}
+		{B4A6E663-3A0C-4BB3-A2FE-8714CE1F5017} = {FDE124B5-386D-4D2E-88F7-60233A14B29D}
+		{A66C65E2-7AE8-4353-B12A-345D9184D7AF} = {FDE124B5-386D-4D2E-88F7-60233A14B29D}
+		{5DC73E54-9420-466F-83D4-CEE1123C6C76} = {FDE124B5-386D-4D2E-88F7-60233A14B29D}
+		{6279C8E6-B228-4A87-9DC6-D3916A126703} = {7C154AEA-8153-4608-9107-C1DEB399DA8B}
+		{4851B3DF-3B17-4109-87CE-8F11491AADE1} = {7C154AEA-8153-4608-9107-C1DEB399DA8B}
+		{0C9EB3D7-0848-4CCC-A095-E483655A7A75} = {7C154AEA-8153-4608-9107-C1DEB399DA8B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39D9FCD1-0822-4918-AD15-9DD057E3CE6F}
+	EndGlobalSection
+EndGlobal

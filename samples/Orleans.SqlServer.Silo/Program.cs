@@ -1,17 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Orleans.Configuration;
-using Orleans.Hosting;
-using Orleans.AdoNet.Clustering;
-using Orleans.AdoNet.SqlServer.Clustering;
-using Orleans.AdoNet.SqlServer.Persistence;
-using Orleans.AdoNet.SqlServer.Reminder;
-using Orleans.Grains;
 
-namespace Orleans.Server
+namespace Orleans.SqlServer.Silo
 {
     class Program
     {

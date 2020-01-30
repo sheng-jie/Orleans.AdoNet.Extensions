@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>Orleans</RootNamespace>
-    <AssemblyName>Orleans.Extensions</AssemblyName>
+    <RootNamespace>Orleans.AdoNet</RootNamespace>
+    <AssemblyName>Orleans.AdoNet.Extensions</AssemblyName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>shengjie</Authors>
     <Company>shengjie</Company>

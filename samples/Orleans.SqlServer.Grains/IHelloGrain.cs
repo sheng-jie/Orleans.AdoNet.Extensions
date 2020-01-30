@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace Orleans.Grains
+﻿namespace Orleans.SqlServer.Grains
 {
     public interface IHelloGrain : IGrainWithStringKey
     {
