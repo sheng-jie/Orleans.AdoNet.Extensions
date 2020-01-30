@@ -9,8 +9,8 @@
             SourceFiles="@(SourceScripts)"
             DestinationFolder="$(MSBuildProjectDirectory)/SqlScripts/%(RecursiveDir)"
             Condition="!(Exists(@(Packages->'$(TargetDir)%(Filename)%(Extension)')))"
-            OverwriteReadOnlyFiles="false"
-            Retries="2"
-            RetryDelayMilliseconds="400"/>
+            OverwriteReadOnlyFiles="false"/>
+            <!-- Retries="2" -->
+            <!-- RetryDelayMilliseconds="400"/> -->
     </Target>
 </Project>
