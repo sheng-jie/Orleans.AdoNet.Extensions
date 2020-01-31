@@ -1,4 +1,6 @@
-﻿namespace Orleans.SqlServer.Grains
+﻿using System.Threading.Tasks;
+
+namespace Orleans.SqlServer.Grains
 {
     public class HelloGrain:Grain,IHelloGrain
     {

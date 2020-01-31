@@ -1,5 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Orleans.Configuration;
+using Orleans.SqlServer.Grains;
+using Orleans.AdoNet.SqlServer.Clustering;
+using Orleans.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace Orleans.SqlServer.Client
 {
@@ -11,7 +16,6 @@ namespace Orleans.SqlServer.Client
             {
                 var connectionString =
                     @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Hello.Orleans;Integrated Security=True;Pooling=False;Max Pool Size=200;MultipleActiveResultSets=True";
-
                 // Configure a client and connect to the service.
                 var client = new ClientBuilder().UseSqlServerClustering(option =>
                         option.ConnectionString = connectionString).Configure<ClusterOptions>(options =>

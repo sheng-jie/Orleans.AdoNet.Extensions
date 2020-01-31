@@ -1,5 +1,14 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Orleans.AdoNet.SqlServer.Clustering;
+using Orleans.AdoNet.SqlServer.Persistence;
+using Orleans.AdoNet.SqlServer.Reminder;
+using Orleans.Configuration;
+using Orleans.Hosting;
+using Orleans.SqlServer.Grains;
 
 namespace Orleans.SqlServer.Silo
 {
@@ -27,7 +36,7 @@ namespace Orleans.SqlServer.Silo
                             options.ClusterId = "Hello.Orleans";
                             options.ServiceId = "Hello.Orleans";
                         }).ConfigureEndpoints(new Random().Next(10001, 20000), new Random().Next(20001, 30000));
-
+                       
                         //use AdoNet for reminder service
                         builder.UseSqlServerReminderService(options =>
                         {
@@ -35,7 +44,7 @@ namespace Orleans.SqlServer.Silo
                             options.Invariant = invariant;
                         }
                         );
-
+                       
                         //use AdoNet for Persistence
                         builder.AddSqlServerGrainStorageAsDefault(options =>
                        {
