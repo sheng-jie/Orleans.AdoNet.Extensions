@@ -1,12 +1,12 @@
-The sql scripts in the below is for creating table and seeding data for orleans clustering, persistence and remiander. 
-It will create the following tables:
-1. OrleansQuery
-2. OrleansMembershipTable
-3. OrleansMembershipVersionTable
-4. OrleansRemindersTable
-5. Storage
+-- The sql scripts in the below is for creating table and seeding data for orleans clustering, persistence and remiander. 
+-- It will create the following tables:
+-- 1. OrleansQuery
+-- 2. OrleansMembershipTable
+-- 3. OrleansMembershipVersionTable
+-- 4. OrleansRemindersTable
+-- 5. Storage
 
-Please copy and run it in your PostgreSql database !
+-- Please copy and run it in your PostgreSql database !
 
 ================================================
 

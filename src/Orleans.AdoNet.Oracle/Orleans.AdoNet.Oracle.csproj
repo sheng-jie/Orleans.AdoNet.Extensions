@@ -37,7 +37,9 @@
     <ItemGroup Label="Packaging">
         <Content Include="$(AssemblyName).targets" PackagePath="build\$(TargetFramework)\$(AssemblyName).targets" />
         <Content Include="SqlScripts\**\*.sql" PackagePath="content\SqlScripts" />
-        <None Include="readme.txt" />
+        <None Include="readme.txt" pack="true" PackagePath=".">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
 </Project>
