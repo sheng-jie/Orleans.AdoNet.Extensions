@@ -4,9 +4,10 @@ namespace Orleans.SqlServer.Grains
 {
     public class HelloGrain:Grain,IHelloGrain
     {
-        public Task<string> SayHi(string username)
+        public Task<string> SayHi(string text)
         {
-            return Task.FromResult($"Hi {username}, Welcome to Orleans!");
+            var username = this.GetPrimaryKeyString();
+            return Task.FromResult($"{username}: {text}!");
         }
     }
 }

@@ -17,7 +17,8 @@ namespace Orleans.SqlServer.Client
                 var connectionString =
                     @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Hello.Orleans;Integrated Security=True;Pooling=False;Max Pool Size=200;MultipleActiveResultSets=True";
                 // Configure a client and connect to the service.
-                var client = new ClientBuilder().UseSqlServerClustering(option =>
+                var client = new ClientBuilder()
+                    .UseSqlServerClustering(option =>
                         option.ConnectionString = connectionString).Configure<ClusterOptions>(options =>
                     {
                         options.ClusterId = "Hello.Orleans";
@@ -26,11 +27,11 @@ namespace Orleans.SqlServer.Client
                     .ConfigureLogging(logging => logging.AddConsole())
                     .Build();
 
-               await client.Connect(CreateRetryFilter());
+                await client.Connect(CreateRetryFilter());
                 Console.WriteLine("Client successfully connect to silo host");
 
                 // Use the connected client to call a grain, writing the result to the terminal.
-                var friend = client.GetGrain<IHelloGrain>(" ");
+                var friend = client.GetGrain<IHelloGrain>("Shengjie");
                 var response = await friend.SayHi("hello orleans");
                 Console.WriteLine(response);
 
