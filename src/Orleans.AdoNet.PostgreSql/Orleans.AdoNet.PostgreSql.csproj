@@ -20,31 +20,17 @@
     <PackageReference Include="Npgsql" Version="4.1.1" />
   </ItemGroup>
 
-  <ItemGroup>
-      <ProjectReference Include="..\Orleans.AdoNet.Extensions\Orleans.AdoNet.Extensions.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Orleans.AdoNet.Extensions\Orleans.AdoNet.Extensions.csproj" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <None Update="SqlScripts\PostgreSQL-Clustering.sql">
-      <PackagePath>lib\$(TargetFramework)\PostgreSQL\</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-    </None>
-    <None Update="SqlScripts\PostgreSQL-Main.sql">
-      <PackagePath>lib\$(TargetFramework)\PostgreSQL\</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-    </None>
-    <None Update="SqlScripts\PostgreSQL-Persistence.sql">
-      <PackagePath>lib\$(TargetFramework)\PostgreSQL\</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-    </None>
-    <None Update="SqlScripts\PostgreSQL-Reminders.sql">
-      <PackagePath>lib\$(TargetFramework)\PostgreSQL\</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
-    </None>
-  </ItemGroup>
+
+    <ItemGroup Label="Packaging">
+        <Content Include="$(AssemblyName).targets" PackagePath="build\$(TargetFramework)\$(AssemblyName).targets" />
+        <Content Include="SqlScripts\**\*.sql" PackagePath="content\SqlScripts" />
+        <None Remove="Orleans.AdoNet.MySql.targets" />
+        <None Remove="Orleans.AdoNet.PostgreSql.targets" />
+        <None Include="readme.txt" />
+    </ItemGroup>
 
 </Project>

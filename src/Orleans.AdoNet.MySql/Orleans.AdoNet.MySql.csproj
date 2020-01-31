@@ -22,9 +22,11 @@
     </ItemGroup>
 
     <ItemGroup Label="Packaging">
-        <Content Include="Orleans.AdoNet.MySql.targets" PackagePath="build\$(TargetFramework)\Orleans.AdoNet.MySql.targets" />
-        <!-- <Content Include="readme.txt" Pack="true" PackagePath="."/> -->
         <Content Include="SqlScripts\**\*.sql" PackagePath="content\SqlScripts" />
+        <None Remove="Orleans.AdoNet.MySql.targets" />
+        <Content Include="Orleans.AdoNet.MySql.targets">
+          <PackagePath>build\$(TargetFramework)\$(AssemblyName).targets</PackagePath>
+        </Content>
         <None Include="readme.txt" pack="true" PackagePath=".">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
