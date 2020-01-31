@@ -28,8 +28,6 @@
     <ItemGroup Label="Packaging">
         <Content Include="$(AssemblyName).targets" PackagePath="build\$(TargetFramework)\$(AssemblyName).targets" />
         <Content Include="SqlScripts\**\*.sql" PackagePath="content\SqlScripts" />
-        <None Remove="Orleans.AdoNet.MySql.targets" />
-        <None Remove="Orleans.AdoNet.PostgreSql.targets" />
         <None Include="readme.txt" />
     </ItemGroup>
 
