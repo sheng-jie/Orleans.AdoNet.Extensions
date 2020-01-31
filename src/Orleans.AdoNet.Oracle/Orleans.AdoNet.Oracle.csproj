@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>shengjie</Authors>
-    <Company>shengjie</Company>
+    <Authors>Shengjie Yan</Authors>
+    <Company>Shengjie Yan</Company>
     <Description>Orleans extensions for configure cluster,reminder,grain persistence with Ado.NET Oracle provider</Description>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</PackageProjectUrl>
@@ -12,7 +12,7 @@
     <RepositoryUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</RepositoryUrl>
     <RepositoryType></RepositoryType>
     <PackageTags>Orleans Ado.Net Oracle</PackageTags>
-    <Version>2.2.2</Version>
+    <Version>3.0.0</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
