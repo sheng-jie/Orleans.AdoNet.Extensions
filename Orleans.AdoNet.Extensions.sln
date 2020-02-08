@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.AdoNet.Extensions",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.SqlServer.Client", "samples\Orleans.SqlServer.Client\Orleans.SqlServer.Client.csproj", "{2B703335-3BD9-455C-A56D-73786F84464B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.AdoNet.SqlServer.Test", "tests\Orleans.AdoNet.SqlServer.Test\Orleans.AdoNet.SqlServer.Test.csproj", "{896D6C03-A2BB-461A-A83F-820AE64585F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{2B703335-3BD9-455C-A56D-73786F84464B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B703335-3BD9-455C-A56D-73786F84464B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B703335-3BD9-455C-A56D-73786F84464B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{896D6C03-A2BB-461A-A83F-820AE64585F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{896D6C03-A2BB-461A-A83F-820AE64585F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{896D6C03-A2BB-461A-A83F-820AE64585F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{896D6C03-A2BB-461A-A83F-820AE64585F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{4851B3DF-3B17-4109-87CE-8F11491AADE1} = {7C154AEA-8153-4608-9107-C1DEB399DA8B}
 		{534F477B-75F4-4F37-A73A-3BEAFFA8E6C2} = {FDE124B5-386D-4D2E-88F7-60233A14B29D}
 		{2B703335-3BD9-455C-A56D-73786F84464B} = {7C154AEA-8153-4608-9107-C1DEB399DA8B}
+		{896D6C03-A2BB-461A-A83F-820AE64585F7} = {8FABEB5B-7C4C-4ABA-AF5B-8141B59515BC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {39D9FCD1-0822-4918-AD15-9DD057E3CE6F}
