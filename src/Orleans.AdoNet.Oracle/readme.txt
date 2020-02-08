@@ -8,7 +8,7 @@
 
 -- Please copy and run it in your Oracle database !
 
-================================================
+-- -----------------------------------------------------------------------------------
 
 -- This table defines Orleans operational queries. Orleans uses these to manage its operations,
 -- these are the only queries Orleans issues to the database.

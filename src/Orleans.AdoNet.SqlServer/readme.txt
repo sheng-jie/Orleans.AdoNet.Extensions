@@ -8,7 +8,7 @@
 
 -- Please copy and run it in your SqlServer database !
 
-================================================
+-- -----------------------------------------------------------------------------------
 
 -- These settings improves throughput of the database by reducing locking by better separating readers from writers.
 -- SQL Server 2012 and newer can refer to itself as CURRENT. Older ones need a workaround.
