@@ -1,4 +1,5 @@
 # Introduction
+![build](https://github.com/sheng-jie/Orleans.AdoNet.Extensions/workflows/.NET%20Core/badge.svg)
 A simple wrapper repo for configuring Orleans cluster, reminder, grain persistence with Ado.NET provider.
 There are four nuget package:
 1. Orleans.AdoNet.MySql
@@ -38,8 +39,8 @@ There are four nuget package:
       {
           var connectionString =
               @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Hello.Orleans;Integrated Security=True;Pooling=False;Max Pool Size=200;MultipleActiveResultSets=True";
+              
          //use AdoNet for clustering 
-
          builder.UseSqlServerClustering(option =>
           {
               option.ConnectionString = connectionString;
@@ -79,6 +80,3 @@ var client = new ClientBuilder()
     .ConfigureLogging(logging => logging.AddConsole())
     .Build();
  ```
- 
- # Todo
- Tests will be add later
