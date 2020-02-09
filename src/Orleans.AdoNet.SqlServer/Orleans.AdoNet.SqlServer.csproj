@@ -8,7 +8,7 @@
         <Description>Orleans extensions for configure cluster,reminder,grain persistence with Ado.NET SqlServer provider</Description>
         <PackageLicenseUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions/blob/master/LICENSE</PackageLicenseUrl>
         <PackageProjectUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</PackageProjectUrl>
-        <PackageIcon>https://github.com/sheng-jie/Orleans.AdoNet.Extensions/blob/master/orleans-logo.png</PackageIcon>
+        <PackageIcon>https://raw.githubusercontent.com/sheng-jie/Orleans.AdoNet.Extensions/master/orleans-logo.png</PackageIcon>
         <RepositoryUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</RepositoryUrl>
         <RepositoryType></RepositoryType>
         <PackageTags>Orleans Ado.Net SqlServer</PackageTags>
