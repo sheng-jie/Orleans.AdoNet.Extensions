@@ -9,7 +9,7 @@
         <Description>Orleans extensions for configuring cluster,reminder,grain persistence and so on</Description>
         <PackageLicenseUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions/blob/master/LICENSE</PackageLicenseUrl>
         <PackageProjectUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</PackageProjectUrl>
-        <!--<PackageIcon>https://nuget.cdn.azure.cn/v3-flatcontainer/microsoft.orleans.orleansproviders/3.0.0/icon</PackageIcon>-->
+        <PackageIcon>https://github.com/sheng-jie/Orleans.AdoNet.Extensions/blob/master/orleans-logo.png</PackageIcon>
         <RepositoryUrl>https://github.com/sheng-jie/Orleans.AdoNet.Extensions</RepositoryUrl>
         
         <RepositoryType></RepositoryType>
