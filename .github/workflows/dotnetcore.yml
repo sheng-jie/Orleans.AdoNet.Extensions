@@ -15,3 +15,8 @@ jobs:
         dotnet-version: 3.0.100
     - name: Build with dotnet
       run: dotnet build --configuration Release
+    - name: Create the package
+      run: dotnet pack --configuration Release 
+    - name: Publish the package to GPR
+      run: dotnet nuget push /bin/Release/*.nupkg
+
